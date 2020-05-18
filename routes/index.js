@@ -1,5 +1,5 @@
-import users from './users'
+import product from './products'
 
 export default app => {
-  app.use('/users', users);
+  app.use('/product', product);
 }
