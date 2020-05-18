@@ -1,0 +1,8 @@
+{
+  	"presets": [],
+  	"plugins": [
+  		"@babel/plugin-transform-async-to-generator",
+        "@babel/plugin-transform-modules-commonjs",
+        "transform-export-extensions"
+    ]
+}
