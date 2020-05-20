@@ -27,12 +27,11 @@ class Home{
               message: '获取数据成功'
             }
             let beauties = await BeautyModel.find();
-            let beauty = beauties[0];
+            let beauty = beauties[0].toObject();
             let list = [];
             for (let id of beauty.idList) {
               list.push(await ProductsModel.findOne({id}));
             }
-            beauty = JSON.parse(JSON.stringify(beauty));
             beauty.list = list;
             data.beauty = beauty;
             data.navLinks = await NavLinksModel.find();
