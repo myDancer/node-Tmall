@@ -22,7 +22,6 @@ const Discover = mongoose.model('Discover', discoverSchema);
 
 Discover.findOne((err, data) => {
 	if (!data) {
-    console.log(discoverData);
     Discover.create(discoverData);
 	}
 });

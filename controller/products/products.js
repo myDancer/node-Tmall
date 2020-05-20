@@ -2,7 +2,7 @@ import ProductsModel from '../../models/products/products'
 
 class Products{
     constructor(){}
-    async getproducts (req, res, next) {
+    async getproductdetailbyid (req, res, next) {
         try {
             const productsInfo = await ProductsModel.findOne();
             res.send(productsInfo);

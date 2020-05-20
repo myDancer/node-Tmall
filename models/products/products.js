@@ -4,17 +4,15 @@ import productsData from '../../InitData/products'
 const Schema = mongoose.Schema;
 
 const productsSchema = new Schema({
-    beauty: {
-        bigBanner: {
-            productImg: String,
-            leftTitle: String,
-            rightTitle: String,
-            id: String,
-        },
-        list: []
-    },
-    brand: [],
-    navLinks: []
+		id: String,
+		productImg: String,
+		name: String,
+		price: Number,
+		describe: String,
+		extra: Number,
+		originalPrice: Number,
+		colors: [],
+		sizes: [],
 })
 
 productsSchema.static.getProductById = function (id) {
@@ -34,10 +32,12 @@ productsSchema.static.getProductById = function (id) {
 
 const Products = mongoose.model('Product', productsSchema);
 
-// 尝试获取一条记录，如果没有，则向数据库增加一条记录
+// 尝试获取一条记录，如果没有，则向数据库初始化增加一条记录
 Products.findOne((err, data) => {
 	if (!data) {
-		Products.create(productsData);
+		productsData.forEach( item => {
+			Products.create(item);
+		})
 	}
 });
 

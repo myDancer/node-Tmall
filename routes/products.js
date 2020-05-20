@@ -4,7 +4,7 @@ import Discover from '../controller/discover/discover'
 var router = express.Router();
 
 
-router.get('/getproducts', Products.getproducts);
+router.get('/getproductdetailbyid', Products.getproductdetailbyid);
 router.get('/getdiscover', Discover.getdiscover);
 
 export default router
