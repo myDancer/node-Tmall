@@ -26,12 +26,14 @@ class Home{
               code: 1,
               message: '获取数据成功'
             }
-            const beauties = await BeautyModel.find();
-            const beauty = beauties[0];
-            beauty.list = [];
+            let beauties = await BeautyModel.find();
+            let beauty = beauties[0];
+            let list = [];
             for (let id of beauty.idList) {
-              beauty.list.push(await ProductsModel.find({id}));
+              list.push(await ProductsModel.findOne({id}));
             }
+            beauty = JSON.parse(JSON.stringify(beauty));
+            beauty.list = list;
             data.beauty = beauty;
             data.navLinks = await NavLinksModel.find();
             data.brands = await BrandsModel.find();
@@ -39,7 +41,6 @@ class Home{
             const discovers = await DiscoverModel.find();
             const discover = discovers[0];
 
-            console.log(discover);
             let goodProducts = [];
             let randomProducts = [];
             for (let id of discover.good.idList) {
@@ -52,6 +53,7 @@ class Home{
             discover.random.goods = randomProducts;
             
             data.discover = discover;
+            console.log('send..')
             res.send(data);
         } catch (error) {
             console.log(error);
