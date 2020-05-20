@@ -4,7 +4,8 @@ import brandsData from '../../initData/brand'
 const Schema = mongoose.Schema;
 
 const brandsSchema = new Schema({
-  
+  brandimg: String,
+	coupon: String,
 })
 
 const Brands = mongoose.model('Brands', brandsSchema);

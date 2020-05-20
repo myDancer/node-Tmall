@@ -4,7 +4,14 @@ import beautyData from '../../initData/beauty'
 const Schema = mongoose.Schema;
 
 const beautySchema = new Schema({
-  
+  bigBanner: {
+    productImg: String,
+    leftTitle: String,
+    rightTitle: String,
+    rightSubTitle: String,
+    id: String
+  },
+  idList: []
 })
 
 const Beauty = mongoose.model('Beauty', beautySchema);

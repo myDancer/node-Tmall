@@ -8,13 +8,13 @@ const discoverSchema = new Schema({
     title: String,
     titleImg: String,
     subtitle: String,
-    goods: [],
+    idList: [],
   },
   random: {
     title: String,
     titleImg: String,
     subtitle: String,
-    goods: [],
+    idList: [],
   }
 })
 

@@ -4,7 +4,10 @@ import navLinksData from '../../initData/navLinks'
 const Schema = mongoose.Schema;
 
 const navLinksSchema = new Schema({
-		
+	title: String,
+  subtitle: String,
+  css: String,
+  links: []
 })
 
 

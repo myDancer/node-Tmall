@@ -9,6 +9,7 @@ const productsSchema = new Schema({
 		name: String,
 		price: Number,
 		describe: String,
+		publisherId: String,
 		extra: Number,
 		originalPrice: Number,
 		colors: [],
