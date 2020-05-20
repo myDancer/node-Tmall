@@ -8,8 +8,8 @@ nodejs + express + mongodb + mongoose + es6/7
 
 ## 开发坏境配置
 
-1. `node.js[下载安装](https://npm.taobao.org/mirrors/node/v14.2.0/node-v14.2.0-x64.msi)`
-2. `mongodb[下载安装](https://www.mongodb.com)`
+1. node.js[下载安装](https://npm.taobao.org/mirrors/node/v14.2.0/node-v14.2.0-x64.msi)
+2. mongodb[下载安装](https://www.mongodb.com)
 
 ## 开发坏境启动
 
