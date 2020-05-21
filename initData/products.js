@@ -23,7 +23,7 @@ export default [{
       extra: 0,
       originalPrice: 1980,
       colors: [{
-        productImg: '//img.alicdn.com/imgextra/TB1aHUXxpuWBuNjSszbL6US7FXa_40x40q90.jpg',
+        productImg: '//img.alicdn.com/imgextra/TB1aHUXxpuWBuNjSszbL6US7FXa',
         name: '红色图案样款'
       },{
         productImg: '//img.alicdn.com/imgextra/i2/383957655/O1CN01DmGvZ926Q2OekGR1D_!!383957655.jpg',
@@ -230,7 +230,7 @@ export default [{
       extra: 32,
       originalPrice: 1,
       colors: [{
-        productImg: '//img.alicdn.com/imgextra/TB1cX.ifrZnBKNjSZFGL6Tt3FXa_40x40q90.jpg',
+        productImg: '//img.alicdn.com/imgextra/TB1cX.ifrZnBKNjSZFGL6Tt3FXa',
         name: '檀黑色-1'
       }],
       sizes: ['XXXL/190'],
