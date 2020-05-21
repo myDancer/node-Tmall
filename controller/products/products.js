@@ -2,10 +2,18 @@ import ProductsModel from '../../models/products/products'
 
 class Products{
     constructor(){}
-    async getproductdetailbyid (req, res, next) {
+    async getProductDetailById (req, res, next) {
         try {
-            const productsInfo = await ProductsModel.findOne();
-            res.send(productsInfo);
+            let { id } = req.query;
+            if (id) {
+                const productsInfo = await ProductsModel.findOne({id});
+                res.send(productsInfo);
+            } else {
+                res.send({
+                    code: 0,
+                    message: '缺少id'
+                });
+            }
         } catch (error) {
             console.log(error);
             res.send({

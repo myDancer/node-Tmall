@@ -38,21 +38,20 @@ class Home{
             data.brands = await BrandsModel.find();
 
             const discovers = await DiscoverModel.find();
-            const discover = discovers[0];
+            const discover = discovers[0].toObject();
 
             let goodProducts = [];
             let randomProducts = [];
             for (let id of discover.good.idList) {
-              goodProducts.push(await ProductsModel.find({id}));
+              goodProducts.push(await ProductsModel.findOne({id}));
             }
             for (let id of  discover.random.idList) {
-              randomProducts.push(await ProductsModel.find({id}));
+              randomProducts.push(await ProductsModel.findOne({id}));
             }
             discover.good.goods = goodProducts;
             discover.random.goods = randomProducts;
             
             data.discover = discover;
-            console.log('send..')
             res.send(data);
         } catch (error) {
             console.log(error);
