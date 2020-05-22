@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const Schema = mongoose.Schema;
 
 const cartSchema = new Schema({
-  goods_id: String,
+  productId: String,
   number: Number,
   size: String,
   color: {}
