@@ -2,6 +2,12 @@
 
 ## 基于 express 实现的，仿天猫商城后端
 
+完成了商品列表，搜索商品，商品详情，购物车
+
+## 前端地址
+
+[https://github.com/myDancer/angular-Tmall](https://github.com/myDancer/angular-Tmall)
+
 ## 技术栈
 
 nodejs + express + mongodb + mongoose + es6/7
